@@ -4,7 +4,7 @@ import java.util.Arrays;
 import javax.swing.*; 
 class WarGui extends JFrame implements ActionListener { 
 	 
-	static JTextField t,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11; 
+	static JTextField t,t1,t2,t3,t4,t5,t6,t7,t8,s1,s2,s3,s4,s5,s6,s7,s8,s9; 
 
 	
 	static JFrame f; 
@@ -37,8 +37,7 @@ class WarGui extends JFrame implements ActionListener {
                 l7 = new JLabel("                                                                                          Soldier 7 ");
                 l8 = new JLabel("                                                                                          Soldier 8 ");
                 l9 = new JLabel("                                                                                          Soldier 9 ");
-                l10 = new JLabel("                                                                                         Soldier 10 ");
-                l11= new JLabel("                                                                                          Soldier 11 ");
+     
                 l12= new JLabel("                                                                                          Terrorist 1 ");
                 l13= new JLabel("                                                                                          Terrorist 2 ");
                 l14= new JLabel("                                                                                          Terrorist 3 ");
@@ -48,8 +47,7 @@ class WarGui extends JFrame implements ActionListener {
                 l18= new JLabel("                                                                                          Terrorist 7 ");
                 l19= new JLabel("                                                                                          Terrorist 8 ");
                 l20= new JLabel("                                                                                          Terrorist 9 ");
-                l21= new JLabel("                                                                                          Terrorist 10 ");
-                l22= new JLabel("                                                                                          Terrorist 11 ");
+            
                 l23= new JLabel("                                                                                          The Strengths of Soldiers");
                 l24= new JLabel("                                                                                          The Strengths of Terrorists");
                 r1=new JLabel("");
@@ -73,8 +71,7 @@ class WarGui extends JFrame implements ActionListener {
                 t6 = new JTextField(5);
                 t7 = new JTextField(5);
                 t8 = new JTextField(5);
-                t9 = new JTextField(5);
-                t10 = new JTextField(5);
+              
                 s1 = new JTextField(5);
                 s2 = new JTextField(5);
                 s3 = new JTextField(5);
@@ -84,8 +81,7 @@ class WarGui extends JFrame implements ActionListener {
                 s7 = new JTextField(5);
                 s8 = new JTextField(5);
                 s9 = new JTextField(5);
-                s10 = new JTextField(5);
-                s11 = new JTextField(5);
+                
 
 		
 		JPanel p = new JPanel(); 
@@ -110,10 +106,7 @@ class WarGui extends JFrame implements ActionListener {
                 p.add(t7);
                 p.add(l9);
                 p.add(t8);
-                p.add(l10);
-                p.add(t9);
-                p.add(l11);
-                p.add(t10);
+                
                 p.add(l24);
                 p.add(l12);
                 p.add(s1);
@@ -133,10 +126,7 @@ class WarGui extends JFrame implements ActionListener {
                 p.add(s8);
                 p.add(l20);
                 p.add(s9);
-                p.add(l21);
-                p.add(s10);
-                p.add(l22);
-                p.add(s11);
+               
 		p.add(b); 
                 p.add(r1);
                 
@@ -157,8 +147,8 @@ class WarGui extends JFrame implements ActionListener {
 	{ 
 		String s = e.getActionCommand(); 
 		if (s.equals("Submit")) { 
-                        int[] soldiers_strength = new int[11];
-			int[] terrorist_strength = new int[11];
+                        int[] soldiers_strength = new int[9];
+			int[] terrorist_strength = new int[9];
 			
                         soldiers_strength[0]=Integer.valueOf(t.getText());
                         soldiers_strength[1]=Integer.valueOf(t1.getText());
@@ -169,8 +159,7 @@ class WarGui extends JFrame implements ActionListener {
                         soldiers_strength[6]=Integer.valueOf(t6.getText());
                         soldiers_strength[7]=Integer.valueOf(t7.getText());
                         soldiers_strength[8]=Integer.valueOf(t8.getText());
-                        soldiers_strength[9]=Integer.valueOf(t9.getText());
-                        soldiers_strength[10]=Integer.valueOf(t10.getText());
+                        
                         terrorist_strength[0]=Integer.valueOf(s1.getText());
                         terrorist_strength[1]=Integer.valueOf(s2.getText());
                         terrorist_strength[2]=Integer.valueOf(s3.getText());
@@ -180,8 +169,7 @@ class WarGui extends JFrame implements ActionListener {
                         terrorist_strength[6]=Integer.valueOf(s7.getText());
                         terrorist_strength[7]=Integer.valueOf(s8.getText());
                         terrorist_strength[8]=Integer.valueOf(s9.getText());
-                        terrorist_strength[9]=Integer.valueOf(s10.getText());
-                        terrorist_strength[10]=Integer.valueOf(s11.getText());
+                       
 			
                         
                         
@@ -189,7 +177,7 @@ class WarGui extends JFrame implements ActionListener {
 			Arrays.sort(terrorist_strength);
                         
                         boolean result = true;
-			for (int i = 0; i < 11; i++) {
+			for (int i = 0; i < 9; i++) {
 				if (soldiers_strength[i] > terrorist_strength[i]) {
 					result = true;
 				} else {

@@ -10,8 +10,8 @@ public class War {
 
 
                        //since there are 11 soldiers and 11 terrrorists according to table
-			int[] soldiers_strength = new int[11];
-			int[] terrorist_strength = new int[11];
+			int[] soldiers_strength = new int[9];
+			int[] terrorist_strength = new int[9];
 
 			for (int i = 0; i < terrorist_strength.length; i++) {
 				System.out.println("Please enter terrorist " +(i+1) +" strength ");
@@ -39,7 +39,7 @@ public class War {
 				System.out.println("Terrorist " + (i+1) + " strength after shuffling is " + terrorist_strength[i] + "");
 			}
 			boolean result = true;
-			for (int i = 0; i < 11; i++) {
+			for (int i = 0; i < 9; i++) {
 				if (soldiers_strength[i] > terrorist_strength[i]) {
 					result = true;
 				} else {
