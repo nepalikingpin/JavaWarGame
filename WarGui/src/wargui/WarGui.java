@@ -13,7 +13,7 @@ class WarGui extends JFrame implements ActionListener {
 	static JButton b; 
 
 	
-	static JLabel l,l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,l20,l21,l22,r1; 
+	static JLabel l,l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18,l19,l20,l21,l22,r1,l23,l24; 
 
 	
 	WarGui() 
@@ -50,6 +50,8 @@ class WarGui extends JFrame implements ActionListener {
                 l20= new JLabel("                                                                                          Terrorist 9 ");
                 l21= new JLabel("                                                                                          Terrorist 10 ");
                 l22= new JLabel("                                                                                          Terrorist 11 ");
+                l23= new JLabel("                                                                                          The Strengths of Soldiers");
+                l24= new JLabel("                                                                                          The Strengths of Terrorists");
                 r1=new JLabel("");
               
 		
@@ -89,7 +91,7 @@ class WarGui extends JFrame implements ActionListener {
 		JPanel p = new JPanel(); 
                
 
-		
+		p.add(l23);
                 p.add(l1);
 		p.add(t);
                 p.add(l2);
@@ -112,6 +114,7 @@ class WarGui extends JFrame implements ActionListener {
                 p.add(t9);
                 p.add(l11);
                 p.add(t10);
+                p.add(l24);
                 p.add(l12);
                 p.add(s1);
                 p.add(l13);
